@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let todo = [];
+let request = prompt("Please enter your request");
+while(true){
+    if (request == "quit"){
+        console.log("quitting the app");
+        break;
+    }else if(request == "list"){
+        console.log("_________");
+        for(let i = 0; i<todo.length; i++){
+            console.log(todo[i]);
+        }console.log("_________");
+    }else if (request == "add"){
+        let task = prompt("please add your task");
+        todo.push(task);
+        console.log("task added");
+    }else if (request == "delete"){
+        let idx = prompt("please enter the task index");
+        todo.splice(idx, 1);
+        console.log("task deleted");
+
+    }else{
+        console.log("wrong request");
+    }request = prompt("please enter your request");
+} 
+    </script>
+    
+</body>
+</html>
